@@ -24,3 +24,11 @@ print("*" * 35)
 numero_dic = {x : (x ** 2) for x in range(10)}
 
 print(f'Dicionário:\n{numero_dic}')
+
+print("*" * 35)
+
+
+numeros_duplicados = {x ** 2 for x in [1,2,2,3,3,4]}
+
+
+print(f'Numeros duplicados:\n{sorted(numeros_duplicados)}')
