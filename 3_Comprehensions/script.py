@@ -30,3 +30,10 @@ print("*" * 35)
 numeros_duplicados = {x ** 2 for x in [1,2,2,3,3,4]}
 
 print(f'Numeros duplicados:\n{sorted(numeros_duplicados)}')
+
+print("*" * 35)
+
+gen = tuple(x ** 2 for x in range(6))
+
+print(f'Generetor:\n{gen}')
+
