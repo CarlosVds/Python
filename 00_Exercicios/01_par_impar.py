@@ -1,11 +1,22 @@
 digitNumber = input('Digite um número: ')
 
 try:
-    numberDigit = int(digitNumber) 
+    numberDigit = float(digitNumber) 
     if numberDigit % 2 == 0:
         print(f'Número digitado foi {numberDigit}, é PAR')
     else:
         print(f'Número digitado foi {numberDigit}, é IMPAR')
 except:
-    print('Somente números inteiros')        
-      
+    print('Somente números inteiros') 
+       
+# if digitNumber.isdigit():
+    
+#     numberDigit = int(digitNumber)
+     
+#     if numberDigit % 2 == 0:
+#         print(f'Número digitado foi {numberDigit}, é PAR')
+#     else:
+#         print(f'Número digitado foi {numberDigit}, é IMPAR')
+        
+# else:
+#     print("Somente números")          
