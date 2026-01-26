@@ -6,5 +6,8 @@
 
 lista = ['Carlos', "Enzo", 'Eika']
 
-for i in lista:
-    print(i, (type(lista)))
+lista.append('Cleide')
+lista.append('Alcino')
+
+for number, i in enumerate(lista):
+    print(number, i)
