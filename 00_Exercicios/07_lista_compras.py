@@ -1,3 +1,4 @@
+import os
 print('*****LISTA DE COMPRAS*****\n')
 
 print("Faça sua lista de compras\n")
@@ -14,23 +15,32 @@ sair = "4"
 
 lista = []
 
-while True:
-    usuario = input('Digite uma das opções: ')   
-    while True:
-        if usuario == inserir:
-            digito = input()
-            lista.append(digito)
-        elif usuario == sair:
-            break    
 
+while True:
+    usuario = input('Digite uma das opções: ')
+  
+    if usuario == inserir:
+        os.system('cls')
+        print('Para finalizar a compra, digite o número da opção SAIR')
+        while True:   
+            digito = input('Produto: ')
+            lista.append(digito)
+            if digito == sair:
+                lista.pop()
+                print('Compra finalizada.')
+                break 
+        
     if usuario == apagar:
-        escolherIndece = int(input('Escolha um indece: '))
+        escolherIndece = int(input('Escolha um indice: '))
         del lista[escolherIndece]
                 
     if usuario == listar:
+        os.system('cls')
+        print('*****Item de sua lista.*****')
         for indice, produto in enumerate(lista):
-            print(indice, produto)
+            print(indice, produto)  
             
     if usuario == sair:
+        print('Sistema finalizado.')
         break
        
