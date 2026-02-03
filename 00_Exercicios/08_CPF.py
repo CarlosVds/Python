@@ -1,22 +1,20 @@
-number = range(9)
-cpf = '74682489070'
-
+# cpf = '74682489070'
+cpf = '36275927003'
+nove_digito = cpf[:9]
 regresso = 10
-soma = 0
+resultado = 0
 
-for i in number:
-    soma += int(cpf[i]) * regresso
+for digito in nove_digito:
+    resultado += int(digito) * regresso
     regresso -= 1
 
-valorTotal = soma * 10
+print(resultado)    
 
-resto = valorTotal % 11
+primeiroDigito = resultado * 10 % 11
 
-digito = 0
+print(primeiroDigito)
 
-if resto > 9:
-    digito += 0
-else:
-    digito += resto   
+digito_1 = primeiroDigito if primeiroDigito <= 9 else 0
 
 print(digito)
+  
