@@ -1,20 +1,33 @@
-# cpf = '74682489070'
-cpf = '36275927003'
-nove_digito = cpf[:9]
-regresso = 10
-resultado = 0
+cpf_digitado = '30190699809'
+
+nove_digito = cpf_digitado[:9]
+regresso_1 = 10
+resultado_1 = 0
 
 for digito in nove_digito:
-    resultado += int(digito) * regresso
-    regresso -= 1
+    resultado_1 += int(digito) * regresso_1
+    regresso_1 -= 1  
 
-print(resultado)    
+primeiro_digito = (resultado_1 * 10) % 11
 
-primeiroDigito = resultado * 10 % 11
+digito_1 = primeiro_digito if primeiro_digito <= 9 else 0
 
-print(primeiroDigito)
+dez_digito = cpf_digitado[:10]
+regresso_2 = 11
+resultado_2 = 0
 
-digito_1 = primeiroDigito if primeiroDigito <= 9 else 0
+for digito in dez_digito:
+    resultado_2 += int(digito) * regresso_2
+    regresso_2 -= 1   
 
-print(digito)
-  
+segundo_digito = (resultado_2 * 10) % 11
+
+digito_2 = segundo_digito if segundo_digito <= 9 else 0
+
+cpf_calculado = f'{nove_digito}{digito_1}{digito_2}'
+
+if cpf_calculado == cpf_digitado:
+    print(f'CPF digitado é válido.')
+else:
+    print('CPF digitado é inválido.')    
+ 
