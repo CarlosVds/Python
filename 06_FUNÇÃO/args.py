@@ -1,8 +1,17 @@
 def soma(*args):
-    total = 0
+    total = 1
+    
     for i in args:
-        total += i
+        total *= i
     return total
 
-print(soma(1,2,3,4,5,6,7,8,9))
+print(soma(2,3))
 
+def parImpar(x):
+    
+    if x % 2 == 0:
+        return f'Número {x} é PAR'
+    else:
+        return f'Número {x} é IMPAR'
+
+print(parImpar(832))    
