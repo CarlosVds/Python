@@ -1,4 +1,4 @@
-cpf_digitado = '30190699809'
+cpf_digitado = '35882101808'
 
 nove_digito = cpf_digitado[:9]
 regresso_1 = 10
