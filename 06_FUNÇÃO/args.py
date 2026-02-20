@@ -4,7 +4,7 @@
 #         total *= multle
 #     return total
 
-# print(soma(2,3,4))
+# print(soma(2,3,4)
 # def parImpar(x):
     
 #     if x % 2 == 0:
