@@ -22,16 +22,16 @@ for pergunta in perguntas:
 
     opcoes = pergunta['Opções']
     
-    for indice, opcao in enumerate(opcoes):
-        print(f'{indice}) {opcao}')
+    for index, value in enumerate(opcoes):
+        print(f'{index}) {value}')
     
     try:
         escolha = input('Escolha uma opção: ')
         
         acertou = False
+        escolha_int = int(escolha) 
         qtd_opcoes = len(opcoes) 
-        escolha_int = int(escolha)    
-
+           
         if escolha_int >= 0 and escolha_int < qtd_opcoes:
             if opcoes[escolha_int] == pergunta['Resposta']:
                 acertou = True
