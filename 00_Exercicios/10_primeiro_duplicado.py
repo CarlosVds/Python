@@ -13,9 +13,22 @@ lista_de_listas_de_inteiros = [
     [10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
 ]
 
-def list_duplicate():
+def list_duplicate(list_duplicate):
     
-    for itens in [lista_de_listas_de_inteiros]:
-        print(itens)      
+    number_checked = set()
+    first_duplicate = -1
     
-list_duplicate()    
+    for number in list_duplicate:
+        if number in number_checked:
+            first_duplicate = number
+            break 
+        number_checked.add(number)         
+    
+    return first_duplicate
+    
+    
+for list in lista_de_listas_de_inteiros:
+    print(
+        list,
+        list_duplicate(list)
+    )   
