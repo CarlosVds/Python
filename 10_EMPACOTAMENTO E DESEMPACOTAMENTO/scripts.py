@@ -8,6 +8,10 @@ data_person ={
     'height': 1.65
 }
 
-complete_data = {**person, **data_person}
+def packaging(**Kwargs):
+    for key, value in Kwargs.items():
+        print (f'{key}: {value}')
+    
 
-print(complete_data)
+print(packaging(**person, **data_person))
+
