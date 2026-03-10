@@ -26,16 +26,25 @@
 
 # show_data(**person, **data_person)
 
-produtos = [
-    {'nome': 'p1', 'preco': 20, },
-    {'nome': 'p2', 'preco': 10, },
-    {'nome': 'p3', 'preco': 30, },
+# produtos = [
+#     {'nome': 'p1', 'preco': 20, },
+#     {'nome': 'p2', 'preco': 10, },
+#     {'nome': 'p3', 'preco': 30, },
+# ]
+
+# new_product = [
+#     {**product, 'preco':product['preco'] * 1.05}
+#     if product['preco'] > 20 else product
+#     for product in produtos 
+#     if product['preco'] > 20
+# ]
+
+# print(*new_product, sep='\n')  
+
+list = [
+    [[x,y] for y in 'Carlos']
+    for x in range(3) 
 ]
 
-new_product = [
-    {**product, 'preco': product['preco'] * 1.05}
-    if product['preco'] > 20 else {**product} 
-    for product in produtos
-]
+print(list)
 
-print(*new_product, sep='\n')  
