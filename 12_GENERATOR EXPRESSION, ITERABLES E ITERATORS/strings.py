@@ -3,16 +3,15 @@
         
 #         yield n
         
-#         n += 1
-        
 #         if n >= maximum:
-#             return
+#             return 
         
-        
+#         n += 1
+# v = 2        
 # gen = gerenator()
 
 # for n in gen:
-#     print(n)
+#     print(f'{v} X {n} = {v * n}')
 
 def gen1():
     yield 1    
