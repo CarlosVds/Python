@@ -1,7 +1,7 @@
 # from soma import soma
 # from sys import path
 
-# print('Ola, sou o modulo principal.')
+# print('Ola, sou o modulo principal.')sh
 
 # print(soma(2,5))
 
